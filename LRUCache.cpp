@@ -83,10 +83,10 @@ public:
 		}
 		else
 		{
-			cout << "LRU Empty!!!!!\n";
+			cout << "LRU Empty!!!!! ";
 		}
 
-		cout << endl;
+//		cout << endl;
 	}
 
 };
@@ -109,19 +109,22 @@ int main(int argc, char **argv)
 			cout << "enter key to be inserted\n";
 			cin >> key;
 			lru.insert(key);
-			cout << "\nLRU status now -->  ";
+			cout << "\nLRU status now Front->  ";
 			lru.printCache();
+			cout << " <- Back\n";
 			break;
 		case 2:
 			cout << "enter key to get from lru\n";
 			cin >> key;
 			cout << "get Result = " << lru.get(key) << endl;
-			cout << "\nLRU status now -->  ";
+			cout << "\nLRU status now Front->  ";
 			lru.printCache();
+			cout << " <- Back\n";
 			break;
 		case 0:
 			exit(0);
-		default: continue;
+		default:
+			continue;
 
 		}
 
